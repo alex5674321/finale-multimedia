@@ -1,38 +1,167 @@
-.App {
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* BACKGROUND */
+/* BACKGROUND – Mediterranean soft gradient */
+.app-background {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(255, 255, 255, 0.7) 0%,
+      rgba(255, 255, 255, 0) 45%
+    ),
+    linear-gradient(
+      180deg,
+      #eaf6ff 0%,
+      #63add5 35%,
+      #c6e6f0 65%,
+      #5cbbd0 100%
+    );
+}
+
+
+
+/* HEADER */
+.header {
+  background-color: aquamarine;
+}
+
+.header-img {
+  width: 100%;
+  max-width: 83%;
+  margin: auto;
+  display: block;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 15px;
+  backdrop-filter: blur(8px);
+}
+
+
+.nav a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* SECTION */
+.section {
+  padding: 70px 40px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  margin: 50px auto;
+  border-radius: 28px;
+  max-width: 1200px;
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(6px);
+}
+
+
+
+.section h2 {
+  font-size: 2.3rem;
+  margin-bottom: 40px;
+}
+
+.section h2::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 4px;
+  background: #00bfa6;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* DIVIDER */
+.section-divider {
+  width: 65%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #bbb, transparent);
+  margin: 30px auto;
+}
+
+/* FLEX */
+.activities,
+.places,
+.traditions,
+.gastronomy {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 35px;
+}
+
+/* LINK RESET */
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* CARDS */
+.activity-card,
+.place-card,
+.tradition-card,
+.gastronomy-card {
+  width: 300px;
+  background: white;
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activity-card:hover,
+.place-card:hover,
+.tradition-card:hover,
+.gastronomy-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* IMAGES */
+.activity-card img,
+.place-card img,
+.tradition-card img,
+.gastronomy-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+.activity-card:hover img,
+.place-card:hover img,
+.tradition-card:hover img,
+.gastronomy-card:hover img {
+  transform: scale(1.06);
+}
+
+/* VIDEO */
+.video-section {
+  padding: 70px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* FOOTER */
+.footer {
+  background-color: #222;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  padding: 20px;
+  text-align: center;
 }
